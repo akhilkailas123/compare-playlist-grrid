@@ -1,0 +1,19 @@
+{
+  "name": "compare-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "debug": "node debug.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongo": "^0.1.0",
+    "mongodb": "^2.2.36",
+    "pg": "^8.18.0"
+  }
+}
