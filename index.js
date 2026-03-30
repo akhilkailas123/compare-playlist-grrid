@@ -1,12 +1,13 @@
 const { MongoClient } = require("mongodb");
 const { Client: PgClient } = require("pg");
+require("dotenv").config({ quiet: true });
 
 // -------------------- Config --------------------
 const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27018";
 const MONGO_DB = process.env.MONGO_DB || "status";
 const MONGO_COLLECTION = process.env.MONGO_COLLECTION || "media_list";
 
-const ZONE_ID = Number(process.env.ZONE_ID || 6925);
+const ZONE_ID = Number(process.env.ZONE_ID || 8660);
 const PLAYLIST_DATE = process.env.PLAYLIST_DATE || new Date().toISOString().slice(0, 10); // YYYY-MM-DD
 
 // Postgres
@@ -401,7 +402,7 @@ async function compareNestedMongoNames() {
 
     console.log("\n" + "─".repeat(60));
   } catch (err) {
-    console.error("❌ Comparison failed");
+    console.error("Comparison failed");
     console.error(err.message);
     console.error(err.stack);
   } finally {
